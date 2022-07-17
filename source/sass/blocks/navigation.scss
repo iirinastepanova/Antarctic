@@ -1,0 +1,97 @@
+.navigation {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 33px;
+
+  @include vp-1365  {
+    gap: 7px 23px;
+  }
+
+  @include vp-767  {
+    flex-direction: column;
+    gap: 0;
+    margin-left: 0;
+  }
+}
+
+.navigation__toggle {
+  display: inline-flex;
+  margin: 10px 0;
+  padding: 10px 20px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation--opened .navigation__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    width: 24.8px;
+    height: 2px;
+    background-color: $color-tangaroa;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+//кнопка бургер на закрытом меню
+.navigation--closed .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  width: 24px;
+  height: 2px;
+  background-color: $color-alice-blue;
+  box-shadow: 0 8px 0 0 $color-alice-blue, 0 16px 0 0 $color-alice-blue;
+}
+
+.navigation--closed a {
+  display: none;
+}
+
+.navigation a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+
+  @include vp-1365  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.navigation--header a{
+  @include vp-767  {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+
+.navigation--footer {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.navigation--footer a {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  @include vp-767  {
+    padding-top: 11px;
+    padding-bottom: 12px;
+  }
+}
