@@ -1,0 +1,21 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $color-tangaroa;
+
+  @include vp-767  {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  @include vp-767  {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
