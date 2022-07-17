@@ -5,27 +5,190 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="header__container container">
+          <a class="logo" href="">
+            <img src="img/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
+          </a>
+
+          <nav class="navigation navigation--header">
+            <button class="navigation__toggle">
+              <span class="visually-hidden">Открыть меню.</span>
+            </button>
+            <a href="#">Преимущества</a>
+            <a href="#">Направления</a>
+            <a href="#">Ближайшие круизы</a>
+            <a href="#">Контакты</a>
+          </nav>
+        </div>
       </header>
       <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+        <section class="welcome">
+          <div class="welcome__container container">
+            <h1>Круизы в Антарктику</h1>
+            <p>Волшебный мир айсбергов и пингвинов</p>
+          </div>
+        </section>
+
+        <section class="adventures">
+          <div class="adventures__container container">
+            <div class="adventures__text">
+              <h2>Путешествие на край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            </div>
+            <picture>
+              <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+              <img  src="img/penguins.jpg" srcset="img/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины в Антарктике.">
+            </picture>
+          </div>
+        </section>
+
+        <section class="advantages">
+          <div class="advantages__container container">
+            <h2>Преимущества</h2>
+            <div class="advantages__cards">
+              <article class="card">
+                <h3>Небольшой круизный лайнер</h3>
+                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+              </article>
+              <article class="card">
+                <h3>Система все включено</h3>
+                <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+              </article>
+              <article class="card">
+                <h3>Экскурсионные туры на Zodiac</h3>
+                <p>Экскурсионные туры к берегам Антарктиды совершаются         на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="cruises">
+          <div class="cruises__container container">
+            <h2>Ближайшие круизы</h2>
+            <div class="cruises__cards">
+              <article class="cruise">
+                <picture>
+                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <img  src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
+                </picture>
+                <h3>Круиз "Астория"</h3>
+                <dl>
+                  <dt>Маршрут</dt>
+                  <dd>Аргентина - Фолклендские острова - Антарктида</dd>
+                  <dt>Порт отправления</dt>
+                  <dd>Ушуайя</dd>
+                  <dt>Продолжительность</dt>
+                  <dd>11 дней</dd>
+                  <dt>Цена</dt>
+                  <dd>от 11500 $</dd>
+                </dl>
+                <a>Забронировать</a>
+              </article>
+              <article class="cruise">
+                <picture>
+                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <img  src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
+                </picture>
+                <h3>Круиз “Элайн”</h3>
+                <dl>
+                  <dt>Маршрут</dt>
+                  <dd>Аргентина - Фолклендские острова - Антарктида - Чили</dd>
+                  <dt>Порт отправления</dt>
+                  <dd>Буэнос-Айрес</dd>
+                  <dt>Продолжительность</dt>
+                  <dd>20 дней</dd>
+                  <dt>Цена</dt>
+                  <dd>от 14500 $</dd>
+                </dl>
+                <a>Забронировать</a>
+              </article>
+              <article class="cruise">
+                <picture>
+                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <img  src="img/atlantis.jpg" srcset="img/atlantis@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
+                </picture>
+                <h3>Круиз "Атлантис"</h3>
+                <dl>
+                  <dt>Маршрут</dt>
+                  <dd>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</dd>
+                  <dt>Порт отправления</dt>
+                  <dd>Ушуайя</dd>
+                  <dt>Продолжительность</dt>
+                  <dd>15 дней</dd>
+                  <dt>Цена</dt>
+                  <dd>от 14500 $</dd>
+                </dl>
+                <a>Забронировать</a>
+              </article>
+              <article class="cruise">
+                <picture>
+                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <img  src="img/odysseus.jpg" srcset="img/odysseus@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
+                </picture>
+                <h3>Круиз "Одиссей"</h3>
+                <dl>
+                  <dt>Маршрут</dt>
+                  <dd>Чили - Антарктида</dd>
+                  <dt>Порт отправления</dt>
+                  <dd>Пунта-Аренас</dd>
+                  <dt>Продолжительность</dt>
+                  <dd>13 дней</dd>
+                  <dt>Цена</dt>
+                  <dd>от 9700 $</dd>
+                </dl>
+                <a>Забронировать</a>
+              </article>
+            </div>
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="footer__container container">
+          <a class="logo logo--footer" href="">
+            <img src="img/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
+          </a>
+
+          <nav class="navigation navigation--footer">
+            <a href="#">Преимущества</a>
+            <a href="#">Направления</a>
+            <a href="#">Ближайшие круизы</a>
+            <a href="#">Контакты</a>
+          </nav>
+
+          <div class="social">
+            <div class="social__container">
+              <a href="#">
+                <svg viewBox="0 0 11 20" aria-hidden="true" focusable="false" width="11" height="20" fill="none">
+                  <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                </svg>
+                <span class="visually-hidden">Facebook.</span>
+              </a>
+              <a href="#">
+                <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" width="20" height="20" fill="none">
+                  <use xlink:href="img/sprite_auto.svg#instagram"></use>
+                </svg>
+                <span class="visually-hidden">Instagram.</span>
+              </a>
+              <a href="#">
+                <svg viewBox="0 0 20 16" aria-hidden="true" focusable="false" width="20" height="16" fill="none">
+                  <use xlink:href="img/sprite_auto.svg#twitter"></use>
+                </svg>
+                <span class="visually-hidden">Twitter.</span>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
+            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
+            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
       </footer>
     </div>
 
@@ -58,7 +221,7 @@
       </div>
     </div>
 
-    <script src="js/vendor.min.js"></script>
+
     <script src="js/main.min.js"></script>
   </body>
 </html>
