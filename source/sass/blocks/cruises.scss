@@ -22,6 +22,7 @@
 .cruises__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(386px, max-content);
   gap: 30px;
 
   @include vp-1365  {
