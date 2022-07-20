@@ -46,7 +46,7 @@
   margin-right: auto;
   margin-left: auto;
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: 50% 0;
   background-color: $color-dark-cerulean;
 
   @include vp-1365 {
