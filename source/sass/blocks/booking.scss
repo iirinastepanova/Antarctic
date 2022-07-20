@@ -1,0 +1,80 @@
+.booking {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $color-solitude;
+  background-image: url("../img/booking.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1365  {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.booking__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-right: 163px;
+  padding-left: 163px;
+
+  @include vp-1365  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-767  {
+    min-width: 250px;
+  }
+}
+
+.booking__promo {
+  margin-top: 178px;
+
+  @include vp-1365  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  @include vp-767  {
+    width: 257px;
+  }
+}
+
+.booking__promo h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+
+  @include vp-1365  {
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+  }
+
+  @include vp-767  {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.booking__promo p {
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1365  {
+    width: 352px;
+    text-align: center;
+  }
+
+  @include vp-767  {
+    width: 257px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
