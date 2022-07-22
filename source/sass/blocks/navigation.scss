@@ -16,13 +16,16 @@
 }
 
 .navigation__toggle {
-  display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
+  display: none;
 
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  @include vp-767  {
+    display: inline-flex;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .navigation--opened .navigation__toggle {
@@ -72,6 +75,10 @@
   @include vp-1365  {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  @include vp-767  {
+    color: $color-tangaroa;
   }
 }
 

@@ -16,7 +16,7 @@
             <img src="img/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
           </a>
 
-          <nav class="navigation navigation--header">
+          <nav class="navigation navigation--header navigation--closed">
             <button class="navigation__toggle">
               <span class="visually-hidden">Открыть меню.</span>
             </button>
@@ -53,14 +53,23 @@
             <h2>Преимущества</h2>
             <div class="advantages__cards">
               <article class="card">
+                <svg viewBox="0 0 27 32" aria-hidden="true" focusable="false" width="27" height="32">
+                  <use xlink:href="img/sprite_auto.svg#liner"></use>
+                </svg>
                 <h3>Небольшой круизный лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
               </article>
               <article class="card">
+                <svg viewBox="0 0 38 21" aria-hidden="true" focusable="false" width="38" height="21">
+                  <use xlink:href="img/sprite_auto.svg#all-inclusive"></use>
+                </svg>
                 <h3>Система все включено</h3>
                 <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
               </article>
               <article class="card">
+                <svg viewBox="0 0 42 15" aria-hidden="true" focusable="false" width="42" height="15">
+                  <use xlink:href="img/sprite_auto.svg#tour"></use>
+                </svg>
                 <h3>Экскурсионные туры на Zodiac</h3>
                 <p>Экскурсионные туры к берегам Антарктиды совершаются         на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
               </article>
@@ -158,7 +167,7 @@
             <div class="booking__form">
 
               <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-                <legend>Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
+                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
                 <div class="form__field">
                   <label class="visually-hidden" for="user-name">Имя.</label>
                   <input id="user-name" type="text" name="user-name" placeholder="Имя" required>
@@ -166,7 +175,7 @@
 
                 <div class="form__field">
                   <label class="visually-hidden" for="user-tel">Телефон.</label>
-                  <input id="user-phone" type="tel" name="user-tel" placeholder="Телефон" required>
+                  <input id="user-tel" type="tel" name="user-tel" placeholder="Телефон" required>
                 </div>
 
                 <div class="form__field">
@@ -175,13 +184,34 @@
                 </div>
 
                 <div class="form__field">
-                  <input type="checkbox" id="user-consent" type="checkbox" name="user-consent" required>
+                  <input id="user-consent" type="checkbox" name="user-consent" required>
                   <span class="form__control form__control--checkbox"></span>
                   <label for="user-consent">Я согласен на обработку моих персональных данных</label>
                 </div>
 
                 <button type="submit">Оставить заявку</button>
               </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="contacts__container container">
+            <h2 class="visually-hidden">Контакты.</h2>
+            <div class="map"></div>
+            <div class="contacts__info">
+              <p>У вас ещё остались вопросы или сомнения?
+                Приезжайте к нам в офис и мы вам все расскажем.</p>
+              <address>
+                <svg viewBox="0 0 18 22" aria-hidden="true" focusable="false" width="18" height="22">
+                  <use xlink:href="img/sprite_auto.svg#pin"></use>
+                </svg>
+                г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
+              <a href="tel:78002000000">
+                <svg viewBox="0 0 18 18" aria-hidden="true" focusable="false" width="18" height="18">
+                  <use xlink:href="img/sprite_auto.svg#phone"></use>
+                </svg>
+                8-800-200-00-00</a>
             </div>
           </div>
         </section>

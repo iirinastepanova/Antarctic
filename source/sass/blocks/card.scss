@@ -1,6 +1,7 @@
 .card {
+  position: relative;
   min-width: 360px;
-  padding: 87px 42px 50px 30px;
+  padding: 25px 42px 50px 30px;
   background-color: $color-alice-blue;
 
   @include vp-1365 {
@@ -11,6 +12,12 @@
   @include vp-767 {
     min-width: 250px;
   }
+}
+
+.card svg {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .card h3 {
