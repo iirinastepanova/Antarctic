@@ -5,7 +5,7 @@
 .contacts__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 100px 20px;
+  gap: 100px 42px;
   padding-top: 120px;
   padding-bottom: 120px;
 
@@ -25,12 +25,15 @@
 }
 
 .contacts__container p {
+  margin-bottom: 28px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 }
 
 .contacts__container address {
+  margin-bottom: 20px;
+  padding-left: 5px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -38,6 +41,8 @@
 }
 
 .contacts__container a {
+  margin-bottom: 20px;
+  padding-left: 5px;
   font-size: 16px;
   line-height: 24px;
 
@@ -53,4 +58,10 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.contacts__info {
+  max-width: 500px;
+  margin-top: 56px;
+  margin-left: auto;
 }

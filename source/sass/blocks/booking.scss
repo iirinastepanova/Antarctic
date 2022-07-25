@@ -1,6 +1,6 @@
 .booking {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   background-color: $color-solitude;
   background-image: url("../img/booking.jpg");
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@
 }
 
 .booking__promo {
-  margin-top: 178px;
+  margin-top: 162px;
 
   @include vp-1365  {
     display: flex;
@@ -46,6 +46,8 @@
 }
 
 .booking__promo h2 {
+  margin-top: 0;
+  margin-bottom: 7px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -63,6 +65,8 @@
 }
 
 .booking__promo p {
+  margin-top: 0;
+  max-width: 390px;
   font-size: 18px;
   line-height: 27px;
 
@@ -78,3 +82,6 @@
   }
 }
 
+.booking__form {
+  margin-left: auto;
+}
