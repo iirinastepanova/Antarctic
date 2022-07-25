@@ -40,4 +40,17 @@
 .contacts__container a {
   font-size: 16px;
   line-height: 24px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

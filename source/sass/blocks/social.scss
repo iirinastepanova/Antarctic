@@ -19,3 +19,18 @@ margin-left: auto;
     gap: 23px;
   }
 }
+
+.social__container a {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

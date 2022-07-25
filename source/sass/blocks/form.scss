@@ -50,6 +50,14 @@
   padding: 11px 16px;
   border: none;
 
+  &:hover {
+    outline: 3px solid #5c7ba5;
+  }
+
+  &:focus {
+    outline: 3px solid #6dabfd;
+  }
+
 }
 
 .form input::placeholder {
@@ -79,15 +87,23 @@
 }
 
 .form__control + label {
-  padding-left: 6px;
-}
-
-input[type=checkbox] {
-  visibility: hidden;
+  padding-left: 25px;
 }
 
 input:checked + .form__control::after {
   display: block;
+}
+
+input:hover + .form__control {
+  outline: 3px solid #5c7ba5;
+}
+
+input:focus + .form__control {
+  outline: 3px solid #6dabfd;
+}
+
+input:active + .form__control {
+  opacity: 0.5;
 }
 
 .form button {
@@ -100,4 +116,16 @@ input:checked + .form__control::after {
   background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    outline: 3px solid #5c7ba5;
+  }
+
+  &:focus {
+    outline: 3px solid #6dabfd;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
