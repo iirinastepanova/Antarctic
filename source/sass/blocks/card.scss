@@ -6,7 +6,7 @@
 
   @include vp-1365 {
     min-width: 206px;
-    padding: 76px 16px 25px 20px;
+    padding: 73px 16px 6px 20px;
   }
 
   @include vp-767 {
@@ -21,14 +21,47 @@
 }
 
 .card h3 {
+  margin-top: 0;
   margin-bottom: 8px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+
+  @include vp-1365 {
+    line-height: 25px;
+  }
 }
 
 .card p {
   margin-top: 0;
   font-size: 14px;
   line-height: 20px;
+}
+
+
+.card--liner svg {
+  @include vp-1365 {
+    top: 26px;
+    left: 20px;
+    width: 21px;
+    height: 26px;
+  }
+}
+
+.card--all-inclusive svg {
+  @include vp-1365 {
+    top: 30px;
+    left: 20px;
+    width: 33px;
+    height: 19px;
+  }
+}
+
+.card--tour svg {
+  @include vp-1365 {
+    top: 33px;
+    left: 20px;
+    width: 38px;
+    height: 13px;
+  }
 }

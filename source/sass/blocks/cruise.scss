@@ -5,17 +5,17 @@
   min-width: 260px;
   min-height: 386px;
   padding: 30px 25px 25px;
-  background-image: url(../img/);
   background-color: $color-tangaroa;
 
-  @include vp-1365  {
+  @include vp-1365 {
     min-width: 309px;
   }
 
-  @include vp-767  {
+  @include vp-767 {
     min-width: 250px;
   }
 }
+
 .cruise img {
   position: absolute;
   top: 0;
@@ -29,11 +29,11 @@
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 
-  @include vp-1365  {
+  @include vp-1365 {
     max-height: 100%;
   }
 
-  @include vp-767  {
+  @include vp-767 {
     min-width: 250px;
   }
 }
@@ -56,6 +56,11 @@
   font-size: 18px;
   line-height: 27px;
   color: $color-alice-blue;
+
+  @include vp-1365 {
+    top: 306px;
+    left: 11px;
+  }
 }
 
 .cruise:hover h3 {
@@ -69,7 +74,7 @@
   color: $color-alice-blue;
 }
 
-.cruise:hover dl{
+.cruise:hover dl {
   visibility: visible;
 }
 
@@ -115,7 +120,6 @@
   }
 }
 
-.cruise:hover a{
+.cruise:hover a {
   visibility: visible;
 }
-

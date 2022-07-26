@@ -1,10 +1,10 @@
 .social {
-display: flex;
-margin-left: auto;
+  display: flex;
+  margin-left: auto;
 
-@include vp-767 {
-  margin-left: 0;
-}
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 
@@ -17,6 +17,8 @@ margin-left: auto;
 
   @include vp-1365 {
     gap: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -32,5 +34,26 @@ margin-left: auto;
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.social__icon--facebook svg {
+  @include vp-1365 {
+    width: 9px;
+    height: 16px;
+  }
+}
+
+.social__icon--instagram svg {
+  @include vp-1365 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.social__icon--twitter svg {
+  @include vp-1365 {
+    width: 16px;
+    height: 13px;
   }
 }

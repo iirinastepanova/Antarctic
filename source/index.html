@@ -10,14 +10,14 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header header--no-js">
+      <header class="header header--no-js" data-selector="header">
         <div class="header__container container">
-          <a class="logo" href="">
+          <a class="header__logo logo" href="">
             <img src="img/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
           </a>
 
-          <nav class="navigation navigation--no-js navigation--header">
-            <button class="navigation__toggle">
+          <nav class="navigation navigation--no-js navigation--header" data-selector="navigation">
+            <button class="navigation__toggle" data-selector="button">
               <span class="visually-hidden">Открыть меню.</span>
             </button>
             <a class="navigation__logo logo" href="">
@@ -41,8 +41,8 @@
         <section class="adventures">
           <div class="adventures__container container">
             <div class="adventures__text">
-              <h2>Путешествие на край Земли</h2>
-              <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+              <h2>Путешествие на&nbsp;край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
             <picture>
               <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
@@ -55,21 +55,21 @@
           <div class="advantages__container container">
             <h2>Преимущества</h2>
             <div class="advantages__cards">
-              <article class="card">
+              <article class="card card--liner">
                 <svg viewBox="0 0 27 32" aria-hidden="true" focusable="false" width="27" height="32">
                   <use xlink:href="img/sprite_auto.svg#liner"></use>
                 </svg>
                 <h3>Небольшой круизный лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </article>
-              <article class="card">
+              <article class="card card--all-inclusive">
                 <svg viewBox="0 0 38 21" aria-hidden="true" focusable="false" width="38" height="21">
                   <use xlink:href="img/sprite_auto.svg#all-inclusive"></use>
                 </svg>
-                <h3>Система все включено</h3>
+                <h3>Система все&nbsp;включено</h3>
                 <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
               </article>
-              <article class="card">
+              <article class="card card--tour">
                 <svg viewBox="0 0 42 15" aria-hidden="true" focusable="false" width="42" height="15">
                   <use xlink:href="img/sprite_auto.svg#tour"></use>
                 </svg>
@@ -275,8 +275,7 @@
             <h2 class="visually-hidden">Контакты.</h2>
             <div class="map"></div>
             <div class="contacts__info">
-              <p>У вас ещё остались вопросы или сомнения?
-                Приезжайте к нам в офис и мы вам все расскажем.</p>
+              <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
               <address>
                 <svg viewBox="0 0 18 22" aria-hidden="true" focusable="false" width="18" height="22">
                   <use xlink:href="img/sprite_auto.svg#pin"></use>
@@ -293,7 +292,7 @@
       </main>
       <footer class="footer">
         <div class="footer__container container">
-          <a class="logo logo--footer" href="">
+          <a class="footer__logo logo" href="">
             <img src="img/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
           </a>
 
@@ -306,19 +305,19 @@
 
           <div class="social">
             <div class="social__container">
-              <a href="#">
+              <a class="social__icon social__icon--facebook" href="#">
                 <svg viewBox="0 0 11 20" aria-hidden="true" focusable="false" width="11" height="20" fill="none">
                   <use xlink:href="img/sprite_auto.svg#facebook"></use>
                 </svg>
                 <span class="visually-hidden">Facebook.</span>
               </a>
-              <a href="#">
+              <a class="social__icon social__icon--instagram" href="#">
                 <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" width="20" height="20" fill="none">
                   <use xlink:href="img/sprite_auto.svg#instagram"></use>
                 </svg>
                 <span class="visually-hidden">Instagram.</span>
               </a>
-              <a href="#">
+              <a class="social__icon social__icon--twitter" href="#">
                 <svg viewBox="0 0 20 16" aria-hidden="true" focusable="false" width="20" height="16" fill="none">
                   <use xlink:href="img/sprite_auto.svg#twitter"></use>
                 </svg>

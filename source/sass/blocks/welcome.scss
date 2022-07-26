@@ -10,15 +10,16 @@
   background-position: center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/welcome@2x.jpg")
+    background-image: url("../img/welcome@2x.jpg");
   }
 
   @include vp-1365 {
-    padding-top: 280px;
+    min-height: 644px;
+    padding-top: 266px;
     padding-bottom: 10px;
   }
 
-  @include vp-767  {
+  @include vp-767 {
     padding-top: 185px;
     padding-bottom: 10px;
   }
@@ -35,9 +36,9 @@
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
-  text-shadow: 0px 4px 4px $color-transparent;
+  text-shadow: 0 4px 4px $color-transparent;
 
-  @include vp-1365  {
+  @include vp-1365 {
     font-size: 50px;
     line-height: 61px;
   }
@@ -46,7 +47,6 @@
     font-size: 36px;
     line-height: 45px;
   }
-
 }
 
 .welcome__container p {
@@ -54,7 +54,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  text-shadow: 0px 4px 4px $color-transparent;
+  text-shadow: 0 4px 4px $color-transparent;
 
   @include vp-1365 {
     font-size: 18px;
