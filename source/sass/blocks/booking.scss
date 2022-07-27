@@ -10,6 +10,11 @@
     padding-top: 87px;
     padding-bottom: 80px;
   }
+
+  @include vp-767 {
+    padding-top: 58px;
+    padding-bottom: 45px;
+  }
 }
 
 .booking__container {
@@ -27,7 +32,7 @@
   }
 
   @include vp-767 {
-    min-width: 250px;
+    row-gap: 19px;
   }
 }
 
@@ -42,7 +47,7 @@
   }
 
   @include vp-767 {
-    width: 257px;
+    // max-width: 86%;-
   }
 }
 
@@ -60,6 +65,7 @@
   }
 
   @include vp-767 {
+    margin-bottom: 14px;
     font-size: 24px;
     line-height: 31px;
   }

@@ -1,5 +1,5 @@
 .advantages {
-  padding-top: 88px;
+  padding-top: 110px;
   padding-bottom: 120px;
   background-color: $color-solitude;
   background-image: url("../img/mountains-background.jpg");
@@ -21,7 +21,7 @@
 .advantages__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px 40px;
+  gap: 40px 40px;
   margin-top: 48px;
 
   @include vp-1365 {
@@ -48,8 +48,9 @@
     line-height: 39px;
   }
 
-    @include vp-767 {
+  @include vp-767 {
     font-size: 24px;
     line-height: 36px;
   }
 }
+

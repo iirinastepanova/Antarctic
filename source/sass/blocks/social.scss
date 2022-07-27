@@ -20,6 +20,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  @include vp-767 {
+    padding-top: 15px;
+  }
 }
 
 .social__container a {
