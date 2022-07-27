@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
+    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=cf0f28ec-2b7a-4cac-b7dc-c61428a67441&lang=ru_RU" type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -23,10 +27,10 @@
             <a class="navigation__logo logo" href="">
               <img src="img/logo-dark.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
             </a>
-            <a href="#">Преимущества</a>
+            <a href="#advantages">Преимущества</a>
             <a href="#">Направления</a>
-            <a href="#">Ближайшие круизы</a>
-            <a href="#">Контакты</a>
+            <a href="#cruises">Ближайшие круизы</a>
+            <a href="#contacts">Контакты</a>
           </nav>
         </div>
       </header>
@@ -44,14 +48,16 @@
               <h2>Путешествие на&nbsp;край Земли</h2>
               <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
-            <picture>
-              <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
-              <img  src="img/penguins.jpg" srcset="img/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины в Антарктике.">
-            </picture>
+            <div class="adventures__image">
+              <picture>
+                <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x" width="560" height="301">
+                <img  src="img/penguins.jpg" srcset="img/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины в Антарктике.">
+              </picture>
+            </div>
           </div>
         </section>
 
-        <section class="advantages">
+        <section class="advantages" id="advantages">
           <div class="advantages__container container">
             <h2>Преимущества</h2>
             <div class="advantages__cards">
@@ -73,20 +79,20 @@
                 <svg viewBox="0 0 42 15" aria-hidden="true" focusable="false" width="42" height="15">
                   <use xlink:href="img/sprite_auto.svg#tour"></use>
                 </svg>
-                <h3>Экскурсионные туры на Zodiac</h3>
+                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
                 <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="cruises">
+        <section class="cruises" id="cruises">
           <div class="cruises__container container">
             <h2>Ближайшие круизы</h2>
             <div class="cruises__cards">
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/astoria.webp, img/astoria@2x.webp 2x">
                   <img  src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Астория"</h3>
@@ -104,7 +110,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/minion.webp, img/minion@2x.webp 2x">
                   <img  src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз “Элайн”</h3>
@@ -122,7 +128,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/atlantis.webp, img/atlantis@2x.webp 2x">
                   <img  src="img/atlantis.jpg" srcset="img/atlantis@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Атлантис"</h3>
@@ -140,7 +146,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/odysseus.webp, img/odysseus@2x.webp 2x">
                   <img  src="img/odysseus.jpg" srcset="img/odysseus@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Одиссей"</h3>
@@ -158,7 +164,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/olimpya.webp, img/olimpya@2x.webp 2x">
                   <img  src="img/olimpya.jpg" srcset="img/olimpya@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Олимпия"</h3>
@@ -176,7 +182,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/avrora.webp, img/avrora@2x.webp 2x">
                   <img  src="img/avrora.jpg" srcset="img/avrora@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Аврора"</h3>
@@ -194,7 +200,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/leonor.webp, img/leonor@2x.webp 2x">
                   <img  src="img/leonor.jpg" srcset="img/leonor@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Леонор"</h3>
@@ -212,7 +218,7 @@
               </article>
               <article class="cruise">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/minion.webp, img/minion@2x.webp 2x">
                   <img  src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" width="260" height="386" alt="Круиз Астория.">
                 </picture>
                 <h3>Круиз "Минион - 1"</h3>
@@ -242,15 +248,15 @@
             <div class="booking__form">
 
               <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
                 <div class="form__field">
                   <label class="visually-hidden" for="user-name">Имя.</label>
-                  <input id="user-name" type="text" name="user-name" placeholder="Имя" required>
+                  <input id="user-name" type="text" name="user-name" placeholder="Имя" pattern="[А-Яа-я]{2,30}"required>
                 </div>
 
                 <div class="form__field">
                   <label class="visually-hidden" for="user-tel">Телефон.</label>
-                  <input id="user-tel" type="tel" name="user-tel" placeholder="Телефон" required>
+                  <input id="user-tel" type="tel" name="user-tel" placeholder="Телефон" pattern="[0-9]{7,11}" required>
                 </div>
 
                 <div class="form__field">
@@ -270,10 +276,10 @@
           </div>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__container container">
             <h2 class="visually-hidden">Контакты.</h2>
-            <div class="map"></div>
+            <div class="map map--no-js" id="map" data-element="map"></div>
             <div class="contacts__info">
               <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
               <address>
@@ -297,10 +303,10 @@
           </a>
 
           <nav class="navigation navigation--footer">
-            <a href="#">Преимущества</a>
+            <a href="#advantages">Преимущества</a>
             <a href="#">Направления</a>
-            <a href="#">Ближайшие круизы</a>
-            <a href="#">Контакты</a>
+            <a href="#cruises">Ближайшие круизы</a>
+            <a href="#contacts">Контакты</a>
           </nav>
 
           <div class="social">
@@ -328,42 +334,8 @@
 
 
         </div>
-        <!-- <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
     <script src="js/main.min.js"></script>
   </body>
 </html>
