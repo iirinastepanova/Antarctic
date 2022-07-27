@@ -1,5 +1,4 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import {createMap} from './vendor/ymaps';
 
 // ---------------------------------
 
@@ -10,9 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('[data-selector="navigation"]');
   const header = document.querySelector('[data-selector="header"]');
   const toggle = document.querySelector('[data-selector="button"]');
+  const map = document.querySelector('[data-element="map"]');
 
   nav.classList.remove('navigation--nojs');
   nav.classList.add('navigation--closed');
+  map.classList.remove('map--nojs');
 
   header.classList.remove('header--no-js');
 
@@ -25,7 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('navigation--opened');
     }
   });
-  iosVhFix();
 
   // Modules
   // ---------------------------------
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    ymaps.ready(createMap);
   });
 });
 
@@ -61,3 +61,4 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
