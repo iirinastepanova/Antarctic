@@ -1,87 +1,105 @@
-.contacts {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  background-color: $color-alice-blue;
+.contacts
+{
+    padding-top: 120px;
+    padding-bottom: 120px;
 
-  @include vp-1365 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+    background-color: $color-alice-blue;
 
-  @include vp-767 {
-    padding-top: 40px;
-    padding-bottom: 63px;
-  }
+    @include vp-1365
+    {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @include vp-767
+    {
+        padding-top: 40px;
+        padding-bottom: 63px;
+    }
 }
 
-.contacts__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px 42px;
+.contacts__container
+{
+    display: grid;
 
-  @include vp-1365 {
-    column-gap: 30px;
-  }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 42px;
+    @include vp-1365
+    {
+        column-gap: 30px;
+    }
+    @include vp-767
+    {
+        display: flex;
+        flex-direction: column-reverse;
 
-  @include vp-767 {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 0;
-  }
+        gap: 0;
+    }
 }
 
-.contacts__container p {
-  margin-bottom: 28px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+.contacts__container p
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
 
-  @include vp-1365 {
-    margin-bottom: 22px;
-  }
+    margin-bottom: 28px;
+
+    @include vp-1365
+    {
+        margin-bottom: 22px;
+    }
 }
 
-.contacts__container address {
-  margin-bottom: 20px;
-  padding-left: 5px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+.contacts__container address
+{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+
+    margin-bottom: 20px;
+    padding-left: 5px;
 }
 
-.contacts__container a {
-  margin-bottom: 20px;
-  padding-left: 5px;
-  font-size: 16px;
-  line-height: 24px;
+.contacts__container a
+{
+    font-size: 16px;
+    line-height: 24px;
 
-  &:hover {
-    opacity: 0.7;
-  }
+    margin-bottom: 20px;
+    padding-left: 5px;
 
-  &:focus {
-    opacity: 0.5;
-    outline: none;
-  }
+    &:hover
+    {
+        opacity: .7;
+    }
 
-  &:active {
-    opacity: 0.3;
-  }
+    &:focus
+    {
+        opacity: .5;
+        outline: none;
+    }
+
+    &:active
+    {
+        opacity: .3;
+    }
 }
 
-.contacts__info {
-  max-width: 500px;
-  margin-top: 56px;
-  margin-left: auto;
+.contacts__info
+{
+    max-width: 500px;
+    margin-top: 56px;
+    margin-left: auto;
 
-  @include vp-1365 {
-    margin-top: 49px;
-  }
-
-  @include vp-767 {
-    margin-top: 0;
-    margin-bottom: 38px;
-    margin-right: auto;
-  }
+    @include vp-1365
+    {
+        margin-top: 49px;
+    }
+    @include vp-767
+    {
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 38px;
+    }
 }

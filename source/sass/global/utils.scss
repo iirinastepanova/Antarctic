@@ -1,35 +1,41 @@
-.wrapper {
-  position: relative;
+.wrapper
+{
+    position: relative;
 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
+    display: flex;
+    flex-direction: column;
 
-  .header,
-  .footer {
-    flex-shrink: 0;
-  }
+    min-height: 100vh;
+    /* stylelint-disable-next-line */
+    min-height: calc(100 * var(--vh, 1vh));
 
-  main {
-    flex-grow: 1;
-  }
+    .header,
+    .footer
+    {
+        flex-shrink: 0;
+    }
+
+    main
+    {
+        flex-grow: 1;
+    }
 }
 
-.visually-hidden {
-  position: absolute;
+.visually-hidden
+{
+    position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
 
-  white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
 
-  border: 0;
+    white-space: nowrap;
 
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
+    border: 0;
+
+    clip-path: inset(100%);
 }

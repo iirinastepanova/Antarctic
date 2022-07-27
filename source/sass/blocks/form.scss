@@ -1,143 +1,184 @@
-.form {
-  display: flex;
-  flex-direction: column;
-  max-width: 403px;
-  margin-bottom: 20px;
-  padding: 43px 50px 50px;
-  color: $color-alice-blue;
-  background-color: $color-tangaroa;
+.form
+{
+    display: flex;
+    flex-direction: column;
 
-  @include vp-1365 {
-    min-width: 403px;
-  }
+    max-width: 403px;
+    margin-bottom: 20px;
+    padding: 43px 50px 50px;
 
-  @include vp-767 {
-    min-width: 290px;
-    padding: 36px 30px 40px;
-  }
+    color: $color-alice-blue;
+    background-color: $color-tangaroa;
+
+    @include vp-1365
+    {
+        min-width: 403px;
+    }
+    @include vp-767
+    {
+        min-width: 290px;
+        padding: 36px 30px 40px;
+    }
 }
 
-.form p {
-  margin-top: 0;
-  margin-bottom: 27px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+.form p
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
 
-  @include vp-767 {
-    line-height: 25px;
-    text-align: center;
-  }
+    margin-top: 0;
+    margin-bottom: 27px;
+
+    @include vp-767
+    {
+        line-height: 25px;
+
+        text-align: center;
+    }
 }
 
-.form__field {
-  position: relative;
-  margin-bottom: 20px;
+.form__field
+{
+    position: relative;
+
+    margin-bottom: 20px;
 }
 
-.form__field:last-of-type {
-  margin-bottom: 25px;
+.form__field:last-of-type
+{
+    margin-bottom: 25px;
 }
 
 
-.form label {
-  display: block;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 13px;
+.form label
+{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+
+    display: block;
 }
 
-.form input[type="text"],
-.form input[type="tel"],
-.form input[type="email"] {
-  width: 100%;
-  padding: 12px 16px;
-  border: none;
+.form input[type='text'],
+.form input[type='tel'],
+.form input[type='email']
+{
+    width: 100%;
+    padding: 12px 16px;
 
-  &:hover {
+    border: none;
+
+    &:hover
+    {
+        outline: 3px solid #5c7ba5;
+    }
+
+    &:focus
+    {
+        outline: 3px solid #6dabfd;
+    }
+}
+
+.form input::placeholder
+{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.form__control
+{
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: $color-alice-blue;
+}
+
+.form__control::after
+{
+    position: absolute;
+    top: 5px;
+    left: 3px;
+
+    display: none;
+
+    width: 12px;
+    height: 8px;
+
+    content: '';
+
+    background-image: url('../img/check-mark.svg');
+    background-repeat: no-repeat;
+}
+
+.form__control + label
+{
+    padding-left: 23px;
+
+    @include vp-767
+    {
+        max-width: 77%;
+    }
+}
+
+input:checked + .form__control::after
+{
+    display: block;
+}
+
+input:hover + .form__control
+{
     outline: 3px solid #5c7ba5;
-  }
+}
 
-  &:focus {
+input:focus + .form__control
+{
     outline: 3px solid #6dabfd;
-  }
 }
 
-.form input::placeholder {
-  font-size: 14px;
-  line-height: 21px;
+input:active + .form__control
+{
+    opacity: .5;
 }
 
-.form__control {
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 18px;
-  height: 18px;
-  background-color: $color-alice-blue;
-}
+.form button
+{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
 
-.form__control::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 3px;
-  display: none;
-  width: 12px;
-  height: 8px;
-  background-image: url("../img/check-mark.svg");
-  background-repeat: no-repeat;
-}
+    width: 100%;
+    margin-top: 11px;
+    padding: 12px 10px 11px;
 
-.form__control + label {
-  padding-left: 23px;
+    cursor: pointer;
 
-  @include vp-767 {
-    max-width: 77%;
-  }
-}
+    color: $color-tangaroa;
+    border: none;
+    background-color: $color-alice-blue;
 
-input:checked + .form__control::after {
-  display: block;
-}
+    @include vp-1365
+    {
+        margin-top: unset;
+    }
 
-input:hover + .form__control {
-  outline: 3px solid #5c7ba5;
-}
+    &:hover
+    {
+        outline: 3px solid #5c7ba5;
+    }
 
-input:focus + .form__control {
-  outline: 3px solid #6dabfd;
-}
+    &:focus
+    {
+        outline: 3px solid #6dabfd;
+    }
 
-input:active + .form__control {
-  opacity: 0.5;
-}
-
-.form button {
-  width: 100%;
-  margin-top: 11px;
-  padding: 12px 10px 11px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  color: $color-tangaroa;
-  background-color: $color-alice-blue;
-  border: none;
-  cursor: pointer;
-
-  @include vp-1365 {
-    margin-top: unset;
-  }
-
-  &:hover {
-    outline: 3px solid #5c7ba5;
-  }
-
-  &:focus {
-    outline: 3px solid #6dabfd;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
+    &:active
+    {
+        opacity: .5;
+    }
 }

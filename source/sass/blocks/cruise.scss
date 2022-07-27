@@ -1,129 +1,166 @@
-.cruise {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 260px;
-  min-height: 386px;
-  padding: 30px 25px 25px;
-  background-color: $color-tangaroa;
+.cruise
+{
+    position: relative;
 
-  @include vp-1365 {
-    min-width: 309px;
-  }
+    display: flex;
+    flex-direction: column;
 
-  @include vp-767 {
-    min-width: 250px;
-  }
+    min-width: 260px;
+    min-height: 386px;
+    padding: 30px 25px 25px;
+
+    background-color: $color-tangaroa;
+
+    @include vp-1365
+    {
+        min-width: 309px;
+    }
+    @include vp-767
+    {
+        min-width: 250px;
+    }
 }
 
-.cruise img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-
-  @include vp-1365 {
-    max-height: 100%;
-  }
-
-  @include vp-767 {
-    min-width: 250px;
-  }
-}
-
-.cruise:hover img {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  transition-timing-function: ease-out;
-}
-
-.cruise h3 {
-  position: relative;
-  top: 308px;
-  left: 5px;
-  z-index: 3;
-  margin-top: 0;
-  margin-bottom: 13px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: $color-alice-blue;
-
-  @include vp-1365 {
-    top: 306px;
-    left: 11px;
-  }
-
-  @include vp-767 {
-    top: 313px;
+.cruise img
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
     left: 0;
-  }
+
+    width: 100%;
+    height: 100%;
+
+    transition-timing-function: ease-out;
+    transition-duration: .5s;
+    transition-property: opacity;
+
+    opacity: 1;
+
+    object-fit: cover;
+    @include vp-1365
+    {
+        max-height: 100%;
+    }
+    @include vp-767
+    {
+        min-width: 250px;
+    }
 }
 
-.cruise:hover h3 {
-  position: static;
+.cruise:hover img
+{
+    width: 0;
+    height: 0;
+
+    transition-timing-function: ease-out;
+
+    opacity: 0;
 }
 
-.cruise dl {
-  margin-top: 0;
-  margin-bottom: 0;
-  visibility: hidden;
-  color: $color-alice-blue;
+.cruise h3
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+
+    position: relative;
+    z-index: 3;
+    top: 308px;
+    left: 5px;
+
+    margin-top: 0;
+    margin-bottom: 13px;
+
+    color: $color-alice-blue;
+
+    @include vp-1365
+    {
+        top: 306px;
+        left: 11px;
+    }
+    @include vp-767
+    {
+        top: 313px;
+        left: 0;
+    }
 }
 
-.cruise:hover dl {
-  visibility: visible;
+.cruise:hover h3
+{
+    position: static;
 }
 
-.cruise dt {
-  margin-bottom: 2px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+.cruise dl
+{
+    visibility: hidden;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $color-alice-blue;
 }
 
-.cruise dd {
-  margin-bottom: 10px;
-  margin-left: 0;
-  font-size: 14px;
-  line-height: 20px;
-  color: $color-quartz;
+.cruise:hover dl
+{
+    visibility: visible;
 }
 
-.cruise a {
-  visibility: hidden;
-  display: block;
-  width: 100%;
-  margin-top: auto;
-  margin-bottom: 5px;
-  padding: 9px 15px 10px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  background-color: $color-alice-blue;
+.cruise dt
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
 
-  &:hover {
-    outline: 3px solid #5c7ba5;
-  }
-
-  &:focus {
-    outline: 3px solid #6dabfd;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+    margin-bottom: 2px;
 }
 
-.cruise:hover a {
-  visibility: visible;
+.cruise dd
+{
+    font-size: 14px;
+    line-height: 20px;
+
+    margin-bottom: 10px;
+    margin-left: 0;
+
+    color: $color-quartz;
+}
+
+.cruise a
+{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+
+    display: block;
+    visibility: hidden;
+
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 5px;
+    padding: 9px 15px 10px;
+
+    text-align: center;
+
+    background-color: $color-alice-blue;
+
+    &:hover
+    {
+        outline: 3px solid #5c7ba5;
+    }
+
+    &:focus
+    {
+        outline: 3px solid #6dabfd;
+    }
+
+    &:active
+    {
+        opacity: .3;
+    }
+}
+
+.cruise:hover a
+{
+    visibility: visible;
 }
