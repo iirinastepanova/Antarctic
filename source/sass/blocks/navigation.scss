@@ -23,7 +23,7 @@
     right: 0;
     min-width: 285px;
     min-height: 568px;
-    padding: 85px 15px 20px;
+    padding: 70px 25px 20px;
     background-color: $color-alice-blue;
   }
 }
@@ -33,11 +33,11 @@
 
   @include vp-767 {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -10px;
+    right: -14px;
     display: block;
-    width: 62px;
-    height: 54px;
+    width: 60px;
+    height: 60px;
     padding: 25px 15px;
     background-color: transparent;
     border: none;
@@ -60,8 +60,8 @@
 .navigation--opened .navigation__logo {
   @include vp-767 {
     position: absolute;
-    top: 0;
-    left: 2px;
+    top: 7px;
+    left: 17px;
     display: block;
   }
 }
@@ -78,9 +78,9 @@
     content: "";
     position: absolute;
     z-index: 2;
-    top: 25px;
-    right: 15px;
-    width: 25px;
+    top: 40px;
+    right: 27px;
+    width: 18px;
     height: 2px;
     background-color: $color-tangaroa;
   }
@@ -97,12 +97,12 @@
 .navigation--closed .navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 23px;
   right: 15px;
   width: 24px;
   height: 2px;
   background-color: $color-alice-blue;
-  box-shadow: 0 8px 0 0 $color-alice-blue, 0 16px 0 0 $color-alice-blue;
+  box-shadow: 0 7px 0 0 $color-alice-blue, 0 14px 0 0 $color-alice-blue;
 }
 
 .navigation--closed a {
@@ -127,6 +127,8 @@
   }
 
   @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
     color: $color-tangaroa;
   }
 
