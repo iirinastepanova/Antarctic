@@ -1,38 +1,38 @@
 // Vendor
 // ---------------------------------
 
-@import 'vendor/normalize';
+@import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
 // ---------------------------------
 
-@import 'variables';
-@import 'mixins';
-@import 'global/fonts';
-@import 'global/reboot';
-@import 'global/utils';
-@import 'global/container';
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
 
 // Blocks
 // ---------------------------------
 
-@import 'blocks/header';
-@import 'blocks/navigation';
-@import 'blocks/welcome';
-@import 'blocks/adventures';
-@import 'blocks/advantages';
-@import 'blocks/card';
-@import 'blocks/cruises';
-@import 'blocks/cruise';
-@import 'blocks/booking';
-@import 'blocks/form';
-@import 'blocks/contacts';
-@import 'blocks/map';
-@import 'blocks/footer';
-@import 'blocks/logo';
-@import 'blocks/social';
+@import "blocks/header";
+@import "blocks/navigation";
+@import "blocks/welcome";
+@import "blocks/adventures";
+@import "blocks/advantages";
+@import "blocks/card";
+@import "blocks/cruises";
+@import "blocks/cruise";
+@import "blocks/booking";
+@import "blocks/form";
+@import "blocks/contacts";
+@import "blocks/map";
+@import "blocks/footer";
+@import "blocks/logo";
+@import "blocks/social";
 
 // ---------------------------------
 

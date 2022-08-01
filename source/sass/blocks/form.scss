@@ -1,184 +1,151 @@
-.form
-{
-    display: flex;
-    flex-direction: column;
+.form {
+  display: flex;
+  flex-direction: column;
 
-    max-width: 403px;
-    margin-bottom: 20px;
-    padding: 43px 50px 50px;
+  max-width: 403px;
+  margin-bottom: 20px;
+  padding: 43px 50px 50px;
 
-    color: $color-alice-blue;
-    background-color: $color-tangaroa;
+  color: $color-alice-blue;
+  background-color: $color-tangaroa;
 
-    @include vp-1365
-    {
-        min-width: 403px;
-    }
-    @include vp-767
-    {
-        min-width: 290px;
-        padding: 36px 30px 40px;
-    }
+  @include vp-1365 {
+    min-width: 403px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    padding: 36px 30px 40px;
+  }
 }
 
-.form p
-{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
+.form p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
 
-    margin-top: 0;
-    margin-bottom: 27px;
+  margin-top: 0;
+  margin-bottom: 27px;
 
-    @include vp-767
-    {
-        line-height: 25px;
+  @include vp-767 {
+    line-height: 25px;
 
-        text-align: center;
-    }
+    text-align: center;
+  }
 }
 
-.form__field
-{
-    position: relative;
+.form__field {
+  position: relative;
+  display: flex;
+  gap: 5px;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.form__field:last-of-type
-{
-    margin-bottom: 25px;
+.form__field:last-of-type {
+  margin-bottom: 25px;
 }
 
 
-.form label
-{
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 13px;
+.form label {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
 
-    display: block;
+  align-self: center;
+
+  @include vp-767 {
+    max-width: 68%;
+
+  }
+
 }
 
-.form input[type='text'],
-.form input[type='tel'],
-.form input[type='email']
-{
-    width: 100%;
-    padding: 12px 16px;
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
 
-    border: none;
+  border: none;
 
-    &:hover
-    {
-        outline: 3px solid #5c7ba5;
-    }
-
-    &:focus
-    {
-        outline: 3px solid #6dabfd;
-    }
-}
-
-.form input::placeholder
-{
-    font-size: 14px;
-    line-height: 21px;
-}
-
-.form__control
-{
-    position: absolute;
-    top: 0;
-
-    display: block;
-
-    width: 18px;
-    height: 18px;
-
-    background-color: $color-alice-blue;
-}
-
-.form__control::after
-{
-    position: absolute;
-    top: 5px;
-    left: 3px;
-
-    display: none;
-
-    width: 12px;
-    height: 8px;
-
-    content: '';
-
-    background-image: url('../img/check-mark.svg');
-    background-repeat: no-repeat;
-}
-
-.form__control + label
-{
-    padding-left: 23px;
-
-    @include vp-767
-    {
-        max-width: 77%;
-    }
-}
-
-input:checked + .form__control::after
-{
-    display: block;
-}
-
-input:hover + .form__control
-{
+  &:hover {
     outline: 3px solid #5c7ba5;
-}
+  }
 
-input:focus + .form__control
-{
+  &:focus {
     outline: 3px solid #6dabfd;
+  }
 }
 
-input:active + .form__control
-{
-    opacity: .5;
+.form input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
 }
 
-.form button
-{
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 21px;
 
-    width: 100%;
-    margin-top: 11px;
-    padding: 12px 10px 11px;
+.form input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
 
-    cursor: pointer;
+  background-color: $color-alice-blue;
 
-    color: $color-tangaroa;
-    border: none;
-    background-color: $color-alice-blue;
+  &:checked {
+    background-image: url("../img/check-mark.svg");
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+  }
 
-    @include vp-1365
-    {
-        margin-top: unset;
-    }
+  &:hover {
+    outline: 3px solid #5c7ba5;
+  }
 
-    &:hover
-    {
-        outline: 3px solid #5c7ba5;
-    }
+  &:focus {
+    outline: 3px solid #6dabfd;
+  }
 
-    &:focus
-    {
-        outline: 3px solid #6dabfd;
-    }
+  &:active {
+    opacity: 0.5;
+  }
+}
 
-    &:active
-    {
-        opacity: .5;
-    }
+.form__control + label {
+  padding-left: 23px;
+
+  @include vp-767 {
+    max-width: 77%;
+  }
+}
+
+.form button {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+
+  width: 100%;
+  margin-top: 11px;
+  padding: 12px 10px 11px;
+
+  cursor: pointer;
+
+  color: $color-tangaroa;
+  border: none;
+  background-color: $color-alice-blue;
+
+  @include vp-1365 {
+    margin-top: unset;
+  }
+
+  &:hover {
+    outline: 3px solid #5c7ba5;
+  }
+
+  &:focus {
+    outline: 3px solid #6dabfd;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

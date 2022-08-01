@@ -1,166 +1,150 @@
-.cruise
-{
-    position: relative;
+.cruise {
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    min-width: 260px;
-    min-height: 386px;
-    padding: 30px 25px 25px;
+  min-width: 260px;
+  min-height: 386px;
+  padding: 30px 25px 25px;
 
-    background-color: $color-tangaroa;
+  background-color: $color-tangaroa;
 
-    @include vp-1365
-    {
-        min-width: 309px;
-    }
-    @include vp-767
-    {
-        min-width: 250px;
-    }
+  @include vp-1365 {
+    min-width: 309px;
+  }
+
+  @include vp-767 {
+    min-width: 250px;
+  }
 }
 
-.cruise img
-{
-    position: absolute;
-    z-index: 2;
-    top: 0;
+.cruise img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+
+  opacity: 1;
+
+  object-fit: cover;
+
+  @include vp-1365 {
+    max-height: 100%;
+  }
+
+  @include vp-767 {
+    min-width: 250px;
+  }
+}
+
+.cruise:hover img {
+  width: 0;
+  height: 0;
+
+  transition-timing-function: ease-out;
+
+  opacity: 0;
+}
+
+.cruise h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+
+  position: relative;
+  z-index: 3;
+  top: 308px;
+  left: 5px;
+
+  margin-top: 0;
+  margin-bottom: 13px;
+
+  color: $color-alice-blue;
+
+  @include vp-1365 {
+    top: 306px;
+    left: 11px;
+  }
+
+  @include vp-767 {
+    top: 313px;
     left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    transition-timing-function: ease-out;
-    transition-duration: .5s;
-    transition-property: opacity;
-
-    opacity: 1;
-
-    object-fit: cover;
-    @include vp-1365
-    {
-        max-height: 100%;
-    }
-    @include vp-767
-    {
-        min-width: 250px;
-    }
+  }
 }
 
-.cruise:hover img
-{
-    width: 0;
-    height: 0;
-
-    transition-timing-function: ease-out;
-
-    opacity: 0;
+.cruise:hover h3 {
+  position: static;
 }
 
-.cruise h3
-{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
+.cruise dl {
+  visibility: hidden;
 
-    position: relative;
-    z-index: 3;
-    top: 308px;
-    left: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
 
-    margin-top: 0;
-    margin-bottom: 13px;
-
-    color: $color-alice-blue;
-
-    @include vp-1365
-    {
-        top: 306px;
-        left: 11px;
-    }
-    @include vp-767
-    {
-        top: 313px;
-        left: 0;
-    }
+  color: $color-alice-blue;
 }
 
-.cruise:hover h3
-{
-    position: static;
+.cruise:hover dl {
+  visibility: visible;
 }
 
-.cruise dl
-{
-    visibility: hidden;
+.cruise dt {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 
-    margin-top: 0;
-    margin-bottom: 0;
-
-    color: $color-alice-blue;
+  margin-bottom: 2px;
 }
 
-.cruise:hover dl
-{
-    visibility: visible;
+.cruise dd {
+  font-size: 14px;
+  line-height: 20px;
+
+  margin-bottom: 10px;
+  margin-left: 0;
+
+  color: $color-quartz;
 }
 
-.cruise dt
-{
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
+.cruise a {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
 
-    margin-bottom: 2px;
+  display: block;
+  visibility: hidden;
+
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 5px;
+  padding: 9px 15px 10px;
+
+  text-align: center;
+
+  background-color: $color-alice-blue;
+
+  &:hover {
+    outline: 3px solid #5c7ba5;
+  }
+
+  &:focus {
+    outline: 3px solid #6dabfd;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.cruise dd
-{
-    font-size: 14px;
-    line-height: 20px;
-
-    margin-bottom: 10px;
-    margin-left: 0;
-
-    color: $color-quartz;
-}
-
-.cruise a
-{
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 21px;
-
-    display: block;
-    visibility: hidden;
-
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: 5px;
-    padding: 9px 15px 10px;
-
-    text-align: center;
-
-    background-color: $color-alice-blue;
-
-    &:hover
-    {
-        outline: 3px solid #5c7ba5;
-    }
-
-    &:focus
-    {
-        outline: 3px solid #6dabfd;
-    }
-
-    &:active
-    {
-        opacity: .3;
-    }
-}
-
-.cruise:hover a
-{
-    visibility: visible;
+.cruise:hover a {
+  visibility: visible;
 }
