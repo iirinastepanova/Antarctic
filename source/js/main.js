@@ -1,13 +1,14 @@
 import {createMap} from './vendor/ymaps';
 
 // ---------------------------------
-
+const ymaps = window.ymaps;
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
   const nav = document.querySelector('[data-selector="navigation"]');
   const header = document.querySelector('[data-selector="header"]');
+  const logo = document.querySelector('[data-element="logo"]');
   const toggle = document.querySelector('[data-selector="button"]');
   const map = document.querySelector('[data-element="map"]');
 
@@ -21,9 +22,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (nav.classList.contains('navigation--closed')) {
       nav.classList.remove('navigation--closed');
       nav.classList.add('navigation--opened');
+      logo.classList.add('header__logo--hidden');
     } else {
       nav.classList.add('navigation--closed');
       nav.classList.remove('navigation--opened');
+      logo.classList.remove('header__logo--hidden');
     }
   });
 
@@ -61,4 +64,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
