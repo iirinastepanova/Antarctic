@@ -1,28 +1,19 @@
 .contacts {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px 42px;
+
   padding-top: 120px;
   padding-bottom: 120px;
 
   background-color: $color-alice-blue;
 
   @include vp-1365 {
+    column-gap: 30px;
+
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-
-  @include vp-767 {
-    padding-top: 40px;
-    padding-bottom: 63px;
-  }
-}
-
-.contacts__container {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px 42px;
-
-  @include vp-1365 {
-    column-gap: 30px;
   }
 
   @include vp-767 {
@@ -30,6 +21,9 @@
     flex-direction: column-reverse;
 
     gap: 0;
+
+    padding-top: 40px;
+    padding-bottom: 63px;
   }
 }
 
