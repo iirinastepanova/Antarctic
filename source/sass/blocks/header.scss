@@ -13,14 +13,6 @@
   }
 }
 
-.header--no-js {
-  @include vp-767 {
-    position: static;
-
-    background-color: $color-alice-blue;
-  }
-}
-
 .header__container {
   display: grid;
 
@@ -50,6 +42,14 @@
 
 .header__logo--hidden {
   visibility: hidden;
+}
+
+.header--no-js {
+  @include vp-767 {
+    position: static;
+
+    background-color: $color-alice-blue;
+  }
 }
 
 .header--no-js .header__logo {
