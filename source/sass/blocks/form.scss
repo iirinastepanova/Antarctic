@@ -19,6 +19,18 @@
   }
 }
 
+.form__field {
+  position: relative;
+  display: flex;
+  gap: 5px;
+
+  margin-bottom: 20px;
+}
+
+.form__field:last-of-type {
+  margin-bottom: 25px;
+}
+
 .form p {
   font-size: 18px;
   font-weight: 500;
@@ -34,19 +46,6 @@
   }
 }
 
-.form__field {
-  position: relative;
-  display: flex;
-  gap: 5px;
-
-  margin-bottom: 20px;
-}
-
-.form__field:last-of-type {
-  margin-bottom: 25px;
-}
-
-
 .form label {
   font-size: 10px;
   font-weight: 400;
@@ -55,10 +54,8 @@
   align-self: center;
 
   @include vp-767 {
-    max-width: 68%;
-
+    max-width: 84%;
   }
-
 }
 
 .form input[type="text"],
@@ -83,7 +80,6 @@
   line-height: 21px;
 }
 
-
 .form input[type="checkbox"] {
   appearance: none;
   width: 18px;
@@ -107,14 +103,6 @@
 
   &:active {
     opacity: 0.5;
-  }
-}
-
-.form__control + label {
-  padding-left: 23px;
-
-  @include vp-767 {
-    max-width: 77%;
   }
 }
 
