@@ -1,5 +1,6 @@
 .welcome {
   min-height: 650px;
+  padding: 270px 103px 10px;
   padding-top: 270px;
   padding-bottom: 10px;
 
@@ -12,14 +13,14 @@
 
   @include vp-1365 {
     min-height: 644px;
+    padding: 266px 45px 10px;
     padding-top: 266px;
     padding-bottom: 10px;
   }
 
   @include vp-767 {
     min-height: 505px;
-    padding-top: 176px;
-    padding-bottom: 10px;
+    padding: 176px 15px 10px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -27,12 +28,7 @@
   }
 }
 
-.welcome__container {
-  padding-left: 198px;
-}
-
-
-.welcome__container h1 {
+.welcome h1 {
   font-size: 54px;
   font-weight: 700;
   line-height: 66px;
@@ -53,7 +49,7 @@
   }
 }
 
-.welcome__container p {
+.welcome p {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
