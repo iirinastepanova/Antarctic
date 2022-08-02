@@ -52,15 +52,6 @@
   }
 }
 
-.booking__form {
-  margin-left: auto;
-
-  @include vp-1365 {
-    margin-left: unset;
-  }
-}
-
-
 .booking__promo h2 {
   font-size: 40px;
   font-weight: 700;
@@ -102,5 +93,13 @@
     line-height: 22px;
 
     width: 257px;
+  }
+}
+
+.booking__form {
+  margin-left: auto;
+
+  @include vp-1365 {
+    margin-left: unset;
   }
 }
