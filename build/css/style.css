@@ -721,12 +721,11 @@ button,
 
 .welcome {
   min-height: 650px;
-  padding: 270px 103px 10px;
   padding-top: 270px;
   padding-bottom: 10px;
   color: #f9fbfd;
   background-color: #003c79;
-  background-image: url("../img/welcome.jpg");
+  background-image: url("../img/welcome.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -797,7 +796,7 @@ button,
   padding-top: 110px;
   padding-bottom: 120px;
   background-color: #e3ecf6;
-  background-image: url("../img/mountains-background.jpg");
+  background-image: url("../img/mountains-background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -870,6 +869,8 @@ button,
   margin-top: 47px;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 14px;
+  padding-left: 14px;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   gap: 28px 30px;
@@ -1005,7 +1006,7 @@ button,
   padding-top: 50px;
   padding-bottom: 30px;
   background-color: #e3ecf6;
-  background-image: url("../img/booking.jpg");
+  background-image: url("../img/booking.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1053,7 +1054,7 @@ button,
   flex-direction: column;
   max-width: 403px;
   margin-bottom: 20px;
-  padding: 43px 50px 50px;
+  padding: 43px 50px 45px;
   color: #f9fbfd;
   background-color: #011c40;
 }
@@ -1068,7 +1069,7 @@ button,
 }
 
 .form__field:last-of-type {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .form p {
@@ -1165,7 +1166,8 @@ button,
   font-weight: 600;
   line-height: 21px;
   width: 100%;
-  margin-top: 11px;
+  margin-top: 6px;
+  margin-bottom: 5px;
   padding: 12px 10px 11px;
   cursor: pointer;
   color: #011c40;
@@ -1196,14 +1198,20 @@ button,
   background-color: #f9fbfd;
 }
 
-.contacts__container p {
+.contacts__info {
+  max-width: 500px;
+  margin-top: 56px;
+  margin-left: auto;
+}
+
+.contacts__info p {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
   margin-bottom: 28px;
 }
 
-.contacts__container address {
+.contacts__info address {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -1212,30 +1220,24 @@ button,
   padding-left: 5px;
 }
 
-.contacts__container a {
+.contacts__info a {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 20px;
   padding-left: 5px;
 }
 
-.contacts__container a:hover {
+.contacts__info a:hover {
   opacity: 0.7;
 }
 
-.contacts__container a:focus {
+.contacts__info a:focus {
   opacity: 0.5;
   outline: none;
 }
 
-.contacts__container a:active {
+.contacts__info a:active {
   opacity: 0.3;
-}
-
-.contacts__info {
-  max-width: 500px;
-  margin-top: 56px;
-  margin-left: auto;
 }
 
 .map {
@@ -1245,7 +1247,7 @@ button,
 }
 
 .map--no-js {
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/map.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1326,7 +1328,7 @@ button,
   }
 
   .header {
-    padding-top: 10px;
+    padding-top: 12px;
   }
 
   .header__logo {
@@ -1351,7 +1353,6 @@ button,
 
   .welcome {
     min-height: 644px;
-    padding: 266px 45px 10px;
     padding-top: 266px;
     padding-bottom: 10px;
   }
@@ -1529,12 +1530,12 @@ button,
     padding-bottom: 100px;
   }
 
-  .contacts__container p {
-    margin-bottom: 22px;
-  }
-
   .contacts__info {
     margin-top: 49px;
+  }
+
+  .contacts__info p {
+    margin-bottom: 22px;
   }
 
   .map {
@@ -1698,7 +1699,8 @@ button,
 
   .welcome {
     min-height: 505px;
-    padding: 176px 15px 10px;
+    padding-top: 176px;
+    padding-bottom: 10px;
   }
 
   .welcome h1 {
@@ -1790,7 +1792,9 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     max-width: 390px;
-    margin-top: 30px;
+    margin-top: 15px;
+    padding-right: 0;
+    padding-left: 0;
     row-gap: 30px;
   }
 
@@ -1835,7 +1839,7 @@ button,
 
   .form {
     min-width: 290px;
-    padding: 36px 30px 40px;
+    padding: 36px 30px 35px;
   }
 
   .form p {
@@ -1897,10 +1901,18 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .welcome {
-    background-image: url("../img/welcome@2x.jpg");
+    background-image: url("../img/welcome@2x.webp");
+  }
+
+  .advantages {
+    background-image: url("../img/mountains-background@2x.webp");
+  }
+
+  .booking {
+    background-image: url("../img/booking@2x.webp");
   }
 
   .map--no-js {
-    background-image: url("../img/map@2x.jpg");
+    background-image: url("../img/map@2x.webp");
   }
 }
