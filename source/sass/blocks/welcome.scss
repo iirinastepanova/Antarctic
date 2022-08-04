@@ -1,30 +1,29 @@
 .welcome {
   min-height: 650px;
-  padding: 270px 103px 10px;
   padding-top: 270px;
   padding-bottom: 10px;
 
   color: $color-alice-blue;
   background-color: $color-dark-cerulean;
-  background-image: url("../img/welcome.jpg");
+  background-image: url("../img/welcome.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include vp-1365 {
     min-height: 644px;
-    padding: 266px 45px 10px;
     padding-top: 266px;
     padding-bottom: 10px;
   }
 
   @include vp-767 {
     min-height: 505px;
-    padding: 176px 15px 10px;
+    padding-top: 176px;
+    padding-bottom: 10px;
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/welcome@2x.jpg");
+    background-image: url("../img/welcome@2x.webp");
   }
 }
 

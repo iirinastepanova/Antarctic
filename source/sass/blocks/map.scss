@@ -14,11 +14,11 @@
 }
 
 .map--no-js {
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/map.webp");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/map@2x.jpg");
+    background-image: url("../img/map@2x.webp");
   }
 }
