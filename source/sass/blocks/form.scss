@@ -4,7 +4,7 @@
 
   max-width: 403px;
   margin-bottom: 20px;
-  padding: 43px 50px 50px;
+  padding: 43px 50px 45px;
 
   color: $color-alice-blue;
   background-color: $color-tangaroa;
@@ -15,7 +15,7 @@
 
   @include vp-767 {
     min-width: 290px;
-    padding: 36px 30px 40px;
+    padding: 36px 30px 35px;
   }
 }
 
@@ -28,7 +28,7 @@
 }
 
 .form__field:last-of-type {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .form p {
@@ -112,7 +112,8 @@
   line-height: 21px;
 
   width: 100%;
-  margin-top: 11px;
+  margin-top: 6px;
+  margin-bottom: 5px;
   padding: 12px 10px 11px;
 
   cursor: pointer;
