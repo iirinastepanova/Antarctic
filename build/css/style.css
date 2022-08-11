@@ -731,6 +731,10 @@ button,
   background-size: cover;
 }
 
+.welcome__container {
+  padding-left: 198px;
+}
+
 .welcome h1 {
   font-size: 54px;
   font-weight: 700;
@@ -822,7 +826,7 @@ button,
 
 .card {
   position: relative;
-  min-width: 360px;
+  min-width: 270px;
   min-height: 241px;
   padding: 82px 10px 30px 30px;
   background-color: #f9fbfd;
@@ -859,7 +863,7 @@ button,
 }
 
 .cruises {
-  padding: 112px 118px 120px;
+  padding: 112px 104px 120px;
   background-color: #f9fbfd;
 }
 
@@ -893,7 +897,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-width: 260px;
+  min-width: 200px;
   min-height: 386px;
   padding: 30px 25px 25px;
   background-color: #011c40;
@@ -1322,7 +1326,7 @@ button,
   }
 } */
 
-@media (max-width: 1365px) {
+@media (max-width: 1364px) {
   .container {
     padding: 0 45px;
   }
@@ -1438,23 +1442,16 @@ button,
   }
 
   .cruises {
-    padding-top: 90px;
-    padding-bottom: 100px;
+    padding: 112px 45px 120px;
   }
 
   .cruises__cards {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 750px;
-  }
-
-  .cruises h2 {
-    font-size: 26px;
-    line-height: 39px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .cruise {
-    min-width: 309px;
+    min-width: 215px;
   }
 
   .cruise img {
@@ -1583,6 +1580,30 @@ button,
   .social__icon--twitter svg {
     width: 16px;
     height: 13px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cruises {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .cruises__cards {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 750px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .cruises h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .cruise {
+    min-width: 365px;
   }
 }
 

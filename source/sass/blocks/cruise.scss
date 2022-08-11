@@ -4,14 +4,18 @@
   display: flex;
   flex-direction: column;
 
-  min-width: 260px;
+  min-width: 200px;
   min-height: 386px;
   padding: 30px 25px 25px;
 
   background-color: $color-tangaroa;
 
   @include vp-1365 {
-    min-width: 309px;
+    min-width: 215px;
+  }
+
+  @include vp-1023 {
+    min-width: 365px;
   }
 
   @include vp-767 {
