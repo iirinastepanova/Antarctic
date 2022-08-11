@@ -8,7 +8,7 @@
 
   gap: 10px 33px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     gap: 7px 23px;
   }
 
@@ -56,7 +56,7 @@
 
   color: $color-alice-blue;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
 
@@ -191,7 +191,7 @@
   padding-top: 11px;
   padding-bottom: 13px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 12px;
     line-height: 15px;
   }

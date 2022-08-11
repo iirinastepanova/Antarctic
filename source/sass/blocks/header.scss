@@ -8,7 +8,7 @@
   color: $color-alice-blue;
   background-color: transparent;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-top: 12px;
   }
 }
@@ -29,7 +29,7 @@
 .header__logo {
   margin-top: 7px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-top: 17px;
   }
 

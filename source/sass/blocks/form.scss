@@ -9,7 +9,7 @@
   color: $color-alice-blue;
   background-color: $color-tangaroa;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-width: 403px;
   }
 
@@ -122,7 +122,7 @@
   border: none;
   background-color: $color-alice-blue;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-top: unset;
   }
 

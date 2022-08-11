@@ -9,7 +9,7 @@
 
   background-color: $color-alice-blue;
 
-  @include vp-1365 {
+  @include vp-1023 {
     column-gap: 30px;
     padding-top: 92px;
     padding-bottom: 77px;
@@ -26,7 +26,7 @@
 .adventures__text {
   margin-top: 56px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-top: -9px;
   }
 }
@@ -42,7 +42,7 @@
 
   margin-top: 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 26px;
     line-height: 36px;
 
@@ -74,7 +74,7 @@
   object-fit: cover;
   object-position: 50% 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     height: 264px;
   }
 

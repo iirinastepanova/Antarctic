@@ -4,7 +4,7 @@
 
   background-color: $color-tangaroa;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-top: 33px;
     padding-bottom: 25px;
   }
@@ -21,7 +21,7 @@
   grid-template-columns: 80px 5fr 1fr;
   gap: 20px 30px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     grid-template-columns: 40px 5fr 1fr;
     column-gap: 23px;
   }
@@ -38,7 +38,7 @@
   margin-top: 0;
   margin-bottom: 19px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-top: 17px;
   }
 }

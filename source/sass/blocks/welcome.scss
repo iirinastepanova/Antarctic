@@ -10,7 +10,7 @@
   background-position: center;
   background-size: cover;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-height: 644px;
     padding-top: 266px;
     padding-bottom: 10px;
@@ -41,7 +41,7 @@
 
   text-shadow: 0 4px 4px $color-transparent;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 50px;
     line-height: 61px;
   }
@@ -61,7 +61,7 @@
 
   text-shadow: 0 4px 4px $color-transparent;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 18px;
     line-height: 22px;
   }
