@@ -257,12 +257,12 @@
                 <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
                 <div class="form__field">
                   <label class="visually-hidden" for="user-name">Имя.</label>
-                  <input id="user-name" type="text" name="user-name" placeholder="Имя" pattern="[А-Яа-я]{2,30}" required>
+                  <input id="user-name" type="text" name="user-name" placeholder="Имя" pattern="^([Аа-Яя]{1}[а-яё]{1,23}|[Aa-Zz]{1}[a-z]{1,23})$" required>
                 </div>
 
                 <div class="form__field">
                   <label class="visually-hidden" for="user-tel">Телефон.</label>
-                  <input id="user-tel" type="tel" name="user-tel" placeholder="Телефон" pattern="[0-9]{5,11}" required>
+                  <input id="user-tel" type="tel" name="user-tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$" required>
                 </div>
 
                 <div class="form__field">
