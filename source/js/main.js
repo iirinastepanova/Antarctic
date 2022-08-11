@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const logo = document.querySelector('[data-element="logo"]');
   const toggle = document.querySelector('[data-selector="button"]');
   const map = document.querySelector('[data-element="map"]');
+  const navLinks = document.querySelectorAll('[data-element="nav-link"]');
 
   nav.classList.remove('navigation--nojs');
   nav.classList.add('navigation--closed');
@@ -18,17 +19,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
   header.classList.remove('header--no-js');
 
+  const openMenu = () => {
+    nav.classList.remove('navigation--closed');
+    nav.classList.add('navigation--opened');
+    logo.classList.add('header__logo--hidden');
+  }
+
+  const closeMenu = () => {
+    nav.classList.add('navigation--closed');
+    nav.classList.remove('navigation--opened');
+    logo.classList.remove('header__logo--hidden');
+  }
+
+
   toggle.addEventListener('click', function () {
     if (nav.classList.contains('navigation--closed')) {
-      nav.classList.remove('navigation--closed');
-      nav.classList.add('navigation--opened');
-      logo.classList.add('header__logo--hidden');
+      openMenu();
     } else {
-      nav.classList.add('navigation--closed');
-      nav.classList.remove('navigation--opened');
-      logo.classList.remove('header__logo--hidden');
+      closeMenu();
     }
   });
+
 
   // Modules
   // ---------------------------------

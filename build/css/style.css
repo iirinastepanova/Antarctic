@@ -1677,11 +1677,12 @@ button,
   }
 
   .navigation--opened {
-    position: absolute;
+    position: fixed;
+    z-index: 3;
     top: 0;
     right: 0;
     min-width: 285px;
-    min-height: 568px;
+    height: 100vh;
     padding: 70px 25px 20px;
     background-color: #f9fbfd;
   }
