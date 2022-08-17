@@ -4,26 +4,28 @@
   display: flex;
   flex-direction: column;
 
-  min-width: 200px;
-  max-height: 386px;
-  max-width: 310px;
+  // min-width: 200px;
+  // max-height: 386px;
+  // max-width: 310px;
   padding: 30px 25px 25px;
   padding: 0;
 
   background-color: $color-tangaroa;
 
   @include vp-1023 {
-    min-width: 310px;
+    // min-width: 310px;
 
     // padding: 0;
   }
 
   @include vp-767 {
-    min-width: 250px;
+    height: 386px;
+    width: 270px;
   }
 }
 
-.cruise:hover {
+.cruise:hover,
+.cruise:focus {
   padding: 30px 25px 25px;
 
   overflow-y: scroll;
@@ -53,11 +55,14 @@
   }
 
   @include vp-767 {
-    min-width: 250px;
+    // min-width: 250px;
+    height: 386px;
+    width: 270px;
   }
 }
 
-.cruise:hover img {
+.cruise:hover img, //??
+.cruise:focus img {
   width: 0;
   height: 0;
 
@@ -91,13 +96,14 @@
   @include vp-767 {
     // top: 313px;
     // left: 0;
-    bottom: -51px;
+    bottom: 48px;
     left: 25px;
     width: 70%;
   }
 }
 
-.cruise:hover h3 {
+.cruise:hover h3,
+.cruise:focus h3 {
   position: static;
 }
 
@@ -111,7 +117,8 @@
   color: $color-alice-blue;
 }
 
-.cruise:hover dl {
+.cruise:hover dl,
+.cruise:focus dl {
   // visibility: visible;
   display: block;
 }
@@ -139,9 +146,9 @@
   font-weight: 600;
   line-height: 21px;
 
-  display: none;
-  // display: block;
-  // visibility: hidden;
+  // display: none;
+  display: block;
+  visibility: hidden;
 
   width: 100%;
   margin-top: auto;
@@ -151,6 +158,7 @@
   text-align: center;
 
   background-color: $color-alice-blue;
+  user-select: none;
 
   &:hover {
     outline: 3px solid #5c7ba5;
@@ -158,6 +166,7 @@
 
   &:focus {
     outline: 3px solid #6dabfd;
+    visibility: visible;
   }
 
   &:active {
@@ -165,7 +174,8 @@
   }
 }
 
-.cruise:hover a {
-  display: block;
-  // visibility: visible;
+.cruise:hover a,
+.cruise:focus a {
+  // display: block;
+  visibility: visible;
 }
