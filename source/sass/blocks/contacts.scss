@@ -28,6 +28,9 @@
 }
 
 .contacts__info {
+  display: flex;
+  flex-direction: column;
+
   max-width: 500px;
   margin-top: 56px;
   margin-left: auto;
