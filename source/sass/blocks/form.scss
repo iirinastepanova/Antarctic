@@ -87,6 +87,8 @@
 
   background-color: $color-alice-blue;
 
+  cursor: pointer;
+
   &:checked {
     background-image: url("../img/check-mark.svg");
     background-repeat: no-repeat;
