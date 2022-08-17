@@ -600,6 +600,10 @@ button,
   clip-path: inset(100%);
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1410px;
@@ -632,9 +636,13 @@ button,
 }
 
 .nav-wrap {
+  margin-left: auto;
+}
+
+.nav-wrap--open {
   width: 100vw;
-  height: 100%;
-  background-color: #33363680;
+  height: 100vh;
+  background-color: rgba(0, 43, 102, 0.5);
   position: fixed;
   z-index: 3;
   top: 0;
@@ -907,15 +915,13 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-width: 200px;
-  max-height: 386px;
-  max-width: 310px;
   padding: 30px 25px 25px;
   padding: 0;
   background-color: #011c40;
 }
 
-.cruise:hover {
+.cruise:hover,
+.cruise:focus {
   padding: 30px 25px 25px;
   overflow-y: scroll;
 }
@@ -941,7 +947,8 @@ button,
   object-fit: cover;
 }
 
-.cruise:hover img {
+.cruise:hover img,
+.cruise:focus img {
   width: 0;
   height: 0;
   -webkit-transition-timing-function: ease-out;
@@ -964,7 +971,8 @@ button,
   color: #f9fbfd;
 }
 
-.cruise:hover h3 {
+.cruise:hover h3,
+.cruise:focus h3 {
   position: static;
 }
 
@@ -975,7 +983,8 @@ button,
   color: #f9fbfd;
 }
 
-.cruise:hover dl {
+.cruise:hover dl,
+.cruise:focus dl {
   display: block;
 }
 
@@ -998,13 +1007,18 @@ button,
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
-  display: none;
+  display: block;
+  visibility: hidden;
   width: 100%;
   margin-top: auto;
   margin-bottom: 5px;
   padding: 9px 15px 10px;
   text-align: center;
   background-color: #f9fbfd;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cruise a:hover {
@@ -1013,14 +1027,16 @@ button,
 
 .cruise a:focus {
   outline: 3px solid #6dabfd;
+  visibility: visible;
 }
 
 .cruise a:active {
   opacity: 0.3;
 }
 
-.cruise:hover a {
-  display: block;
+.cruise:hover a,
+.cruise:focus a {
+  visibility: visible;
 }
 
 .booking {
@@ -1162,6 +1178,7 @@ button,
   width: 18px;
   height: 18px;
   background-color: #f9fbfd;
+  cursor: pointer;
 }
 
 .form input[type="checkbox"]:checked {
@@ -1220,6 +1237,13 @@ button,
 }
 
 .contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   max-width: 500px;
   margin-top: 56px;
   margin-left: auto;
@@ -1485,10 +1509,6 @@ button,
   .cruises h2 {
     font-size: 26px;
     line-height: 39px;
-  }
-
-  .cruise {
-    min-width: 310px;
   }
 
   .cruise img {
@@ -1766,7 +1786,7 @@ button,
   }
 
   .adventures img {
-    height: 186px;
+    height: auto;
     -o-object-position: 50% 0;
     object-position: 50% 0;
   }
@@ -1814,22 +1834,15 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 57px 25px 62px;
+    padding: 57px 15px 62px;
   }
 
   .cruises__cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-width: 390px;
+    max-width: 555px;
     margin-top: 15px;
     padding-right: 0;
     padding-left: 0;
-    row-gap: 30px;
+    gap: 15px;
   }
 
   .cruises h2 {
@@ -1838,15 +1851,17 @@ button,
   }
 
   .cruise {
-    min-width: 250px;
+    height: 386px;
+    width: 270px;
   }
 
   .cruise img {
-    min-width: 250px;
+    height: 386px;
+    width: 270px;
   }
 
   .cruise h3 {
-    bottom: -51px;
+    bottom: 48px;
     left: 25px;
     width: 70%;
   }
@@ -1931,6 +1946,27 @@ button,
 
   .social__container {
     padding-top: 15px;
+  }
+}
+
+@media (max-width: 584px) {
+  .cruises {
+    padding: 57px 25px 62px;
+  }
+
+  .cruises__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 390px;
+    margin-top: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    row-gap: 30px;
   }
 }
 
