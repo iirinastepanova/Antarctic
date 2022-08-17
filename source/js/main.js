@@ -6,12 +6,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-  const nav = document.querySelector('[data-selector="navigation"]');
-  const header = document.querySelector('[data-selector="header"]');
+  const nav = document.querySelector('[data-element="navigation"]');
+  const navWrapper = document.querySelector('[data-element="navigation-wrapper"]');
+  const header = document.querySelector('[data-element="header"]');
   const logo = document.querySelector('[data-element="logo"]');
-  const toggle = document.querySelector('[data-selector="button"]');
+  const toggle = document.querySelector('[data-element="button"]');
   const map = document.querySelector('[data-element="map"]');
+  const body = document.querySelector('[data-element="body"]');
   const navLinks = document.querySelectorAll('[data-element="nav-link"]');
+  const navLink = document.querySelector('[data-element="nav-link"]');
 
   nav.classList.remove('navigation--nojs');
   nav.classList.add('navigation--closed');
@@ -23,12 +26,16 @@ window.addEventListener('DOMContentLoaded', () => {
     nav.classList.remove('navigation--closed');
     nav.classList.add('navigation--opened');
     logo.classList.add('header__logo--hidden');
+    body.classList.add('overflow-hidden');
+    navWrapper.classList.add('nav-wrap--open');
   }
 
   const closeMenu = () => {
     nav.classList.add('navigation--closed');
     nav.classList.remove('navigation--opened');
     logo.classList.remove('header__logo--hidden');
+    body.classList.remove('overflow-hidden');
+    navWrapper.classList.remove('nav-wrap--open');
   }
 
 
@@ -40,6 +47,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  navLinks.forEach((link) => { link.addEventListener('click', closeMenu) })
+
+  window.addEventListener('click', element => {
+    const target = element.target
+    if (!target.closest('[data-element="navigation"]')) {
+      closeMenu()
+    }
+  })
 
   // Modules
   // ---------------------------------
