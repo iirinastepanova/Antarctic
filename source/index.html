@@ -15,16 +15,16 @@
     <link rel="preload" as="image" href="img/welcome@2x.webp"/>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body data-element="body">
     <div class="wrapper">
-      <header class="header header--no-js" data-selector="header">
+      <header class="header header--no-js" data-element="header">
         <div class="header__container container">
           <a class="header__logo logo" href="#" data-element="logo">
             <img src="img/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
           </a>
-          <!-- <div class="nav-wrap"> -->
-            <nav class="navigation navigation--no-js navigation--header" data-selector="navigation">
-              <button class="navigation__toggle" data-selector="button">
+          <div class="nav-wrap" data-element="navigation-wrapper">
+            <nav class="navigation navigation--no-js navigation--header" data-element="navigation">
+              <button class="navigation__toggle" data-element="button">
                 <span class="visually-hidden">Открыть меню.</span>
               </button>
               <a class="navigation__logo logo" href="#">
@@ -35,7 +35,7 @@
               <a href="#cruises" data-element="nav-link">Ближайшие круизы</a>
               <a href="#contacts" data-element="nav-link">Контакты</a>
             </nav>
-          <!-- </div> -->
+          </div>
         </div>
       </header>
       <main>
@@ -90,7 +90,7 @@
         <section class="cruises container" id="cruises">
           <h2>Ближайшие круизы</h2>
           <div class="cruises__cards">
-            <article class="cruise">
+            <article class="cruise" tabindex="0">
               <picture>
                 <!-- 1х: 260px; 2x: 520px -->
                 <source type="image/webp" srcset="img/astoria.webp, img/astoria@2x.webp 2x">
