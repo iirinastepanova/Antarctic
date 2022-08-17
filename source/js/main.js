@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     nav.classList.add('navigation--opened');
     logo.classList.add('header__logo--hidden');
     body.classList.add('overflow-hidden');
-    navWrapper.classList.add('nav-wrap--open');
+    navWrapper.classList.add('header__navigation--open');
   }
 
   const closeMenu = () => {
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     nav.classList.remove('navigation--opened');
     logo.classList.remove('header__logo--hidden');
     body.classList.remove('overflow-hidden');
-    navWrapper.classList.remove('nav-wrap--open');
+    navWrapper.classList.remove('header__navigation--open');
   }
 
 
