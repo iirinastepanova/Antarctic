@@ -26,6 +26,10 @@
   }
 }
 
+.header__navigation {
+  margin-left: auto;
+}
+
 .header__logo {
   margin-top: 7px;
 
@@ -56,4 +60,14 @@
   @include vp-767 {
     display: none;
   }
+}
+
+.header__navigation--open {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 43, 102, 0.5);
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
 }
