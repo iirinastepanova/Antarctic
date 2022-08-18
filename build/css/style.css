@@ -627,6 +627,10 @@ button,
   grid-template-columns: 1fr 5fr;
 }
 
+.header__navigation {
+  margin-left: auto;
+}
+
 .header__logo {
   margin-top: 7px;
 }
@@ -635,11 +639,7 @@ button,
   visibility: hidden;
 }
 
-.nav-wrap {
-  margin-left: auto;
-}
-
-.nav-wrap--open {
+.header__navigation--open {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 43, 102, 0.5);
@@ -895,7 +895,7 @@ button,
   padding-left: 14px;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px 30px;
+  gap: 30px;
 }
 
 .cruises h2 {
@@ -915,7 +915,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 30px 25px 25px;
+  width: 260px;
+  height: 386px;
   padding: 0;
   background-color: #011c40;
 }
@@ -924,15 +925,15 @@ button,
 .cruise:focus {
   padding: 30px 25px 25px;
   overflow-y: scroll;
+  scrollbar-width: auto;
 }
 
 .cruise img {
   z-index: 2;
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
-  max-width: 310px;
+  width: 260px;
+  height: 386px;
   -webkit-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
@@ -963,8 +964,8 @@ button,
   line-height: 27px;
   position: relative;
   z-index: 3;
-  bottom: 20px;
-  left: 25px;
+  bottom: 47px;
+  left: 31px;
   margin-top: 0;
   margin-bottom: 13px;
   width: 70%;
@@ -1011,7 +1012,7 @@ button,
   visibility: hidden;
   width: 100%;
   margin-top: auto;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding: 9px 15px 10px;
   text-align: center;
   background-color: #f9fbfd;
@@ -1511,12 +1512,23 @@ button,
     line-height: 39px;
   }
 
+  .cruise {
+    width: 309px;
+  }
+
+  .cruise:hover,
+  .cruise:focus {
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+
   .cruise img {
-    max-height: 100%;
+    width: 309px;
   }
 
   .cruise h3 {
-    left: 11px;
+    bottom: 54px;
+    left: 36px;
   }
 
   .booking {
@@ -1834,12 +1846,12 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 57px 15px 62px;
+    padding: 57px 15px 66px;
   }
 
   .cruises__cards {
     max-width: 555px;
-    margin-top: 15px;
+    margin-top: 10px;
     padding-right: 0;
     padding-left: 0;
     gap: 15px;
@@ -1853,6 +1865,12 @@ button,
   .cruise {
     height: 386px;
     width: 270px;
+  }
+
+  .cruise:hover,
+  .cruise:focus {
+    padding-right: 23px;
+    padding-left: 23px;
   }
 
   .cruise img {
@@ -1951,7 +1969,8 @@ button,
 
 @media (max-width: 584px) {
   .cruises {
-    padding: 57px 25px 62px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 
   .cruises__cards {
@@ -1963,9 +1982,6 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     max-width: 390px;
-    margin-top: 15px;
-    padding-right: 0;
-    padding-left: 0;
     row-gap: 30px;
   }
 }
