@@ -80,7 +80,9 @@
 
   @include vp-767 {
     height: auto;
+    min-height: 186px;
 
     object-position: 50% 0;
+    object-fit: cover;
   }
 }
