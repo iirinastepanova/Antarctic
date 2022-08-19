@@ -888,13 +888,14 @@ button,
 .cruises__cards {
   display: -ms-grid;
   display: grid;
+  width: 1158px;
   margin-top: 47px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 14px;
   padding-left: 14px;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (260px)[4];
+  grid-template-columns: repeat(4, 260px);
   gap: 30px;
 }
 
@@ -922,10 +923,15 @@ button,
 }
 
 .cruise:hover,
-.cruise:focus {
+.cruise:focus,
+.cruise:focus-within {
   padding: 30px 25px 25px;
   overflow-y: scroll;
   scrollbar-width: auto;
+}
+
+.cruise:focus-within {
+  outline: 1px solid #011c40;
 }
 
 .cruise img {
@@ -949,7 +955,8 @@ button,
 }
 
 .cruise:hover img,
-.cruise:focus img {
+.cruise:focus img,
+.cruise:focus-within img {
   width: 0;
   height: 0;
   -webkit-transition-timing-function: ease-out;
@@ -973,7 +980,8 @@ button,
 }
 
 .cruise:hover h3,
-.cruise:focus h3 {
+.cruise:focus h3,
+.cruise:focus-within h3 {
   position: static;
 }
 
@@ -985,7 +993,8 @@ button,
 }
 
 .cruise:hover dl,
-.cruise:focus dl {
+.cruise:focus dl,
+.cruise:focus-within dl {
   display: block;
 }
 
@@ -1036,7 +1045,8 @@ button,
 }
 
 .cruise:hover a,
-.cruise:focus a {
+.cruise:focus a,
+.cruise:focus-within a {
   visibility: visible;
 }
 
@@ -1374,6 +1384,9 @@ button,
   }
 
   .cruises__cards {
+    width: 840px;
+    -ms-grid-columns: (260px)[3];
+    grid-template-columns: repeat(3, 260px);
     padding-right: 0;
     padding-left: 0;
   }
@@ -1500,9 +1513,9 @@ button,
   }
 
   .cruises__cards {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 750px;
+    -ms-grid-columns: (309px)[2];
+    grid-template-columns: repeat(2, 309px);
+    width: 676px;
     padding-right: 14px;
     padding-left: 14px;
   }
@@ -1517,7 +1530,8 @@ button,
   }
 
   .cruise:hover,
-  .cruise:focus {
+  .cruise:focus,
+  .cruise:focus-within {
     padding-right: 34px;
     padding-left: 34px;
   }
@@ -1799,8 +1813,11 @@ button,
 
   .adventures img {
     height: auto;
+    min-height: 186px;
     -o-object-position: 50% 0;
     object-position: 50% 0;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .advantages {
@@ -1850,6 +1867,8 @@ button,
   }
 
   .cruises__cards {
+    -ms-grid-columns: (270px)[2];
+    grid-template-columns: repeat(2, 270px);
     max-width: 555px;
     margin-top: 10px;
     padding-right: 0;
@@ -1868,7 +1887,8 @@ button,
   }
 
   .cruise:hover,
-  .cruise:focus {
+  .cruise:focus,
+  .cruise:focus-within {
     padding-right: 23px;
     padding-left: 23px;
   }
@@ -1929,7 +1949,7 @@ button,
     flex-direction: column-reverse;
     gap: 0;
     padding-top: 40px;
-    padding-bottom: 63px;
+    padding-bottom: 40px;
   }
 
   .contacts__info {
@@ -1944,7 +1964,7 @@ button,
 
   .footer {
     padding-top: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 12px;
   }
 
   .footer__container {
@@ -1981,7 +2001,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    max-width: 390px;
+    max-width: 270px;
     row-gap: 30px;
   }
 }
