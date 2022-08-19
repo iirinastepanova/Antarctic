@@ -21,7 +21,8 @@
 }
 
 .cruise:hover,
-.cruise:focus {
+.cruise:focus,
+.cruise:focus-within {
   padding: 30px 25px 25px;
 
   overflow-y: scroll;
@@ -36,6 +37,10 @@
     padding-right: 23px;
     padding-left: 23px;
   }
+}
+
+.cruise:focus-within {
+  outline: 1px solid $color-tangaroa;
 }
 
 .cruise img {
@@ -65,7 +70,8 @@
 }
 
 .cruise:hover img,
-.cruise:focus img {
+.cruise:focus img,
+.cruise:focus-within img {
   width: 0;
   height: 0;
 
@@ -103,7 +109,8 @@
 }
 
 .cruise:hover h3,
-.cruise:focus h3 {
+.cruise:focus h3,
+.cruise:focus-within h3 {
   position: static;
 }
 
@@ -117,7 +124,8 @@
 }
 
 .cruise:hover dl,
-.cruise:focus dl {
+.cruise:focus dl,
+.cruise:focus-within dl {
   display: block;
 }
 
@@ -172,6 +180,7 @@
 }
 
 .cruise:hover a,
-.cruise:focus a {
+.cruise:focus a,
+.cruise:focus-within a {
   visibility: visible;
 }
