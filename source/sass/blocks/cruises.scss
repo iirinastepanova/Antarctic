@@ -28,28 +28,32 @@
 .cruises__cards {
   display: grid;
 
+  width: 1158px;
   margin-top: 47px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 14px;
   padding-left: 14px;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 260px);
   gap: 30px;
 
   @include vp-1365 {
+    width: 840px;
+    grid-template-columns: repeat(3, 260px);
     padding-right: 0;
     padding-left: 0;
   }
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 750px;
+    grid-template-columns: repeat(2, 309px);
+    width: 676px;
     padding-right: 14px;
     padding-left: 14px;
   }
 
   @include vp-767 {
+    grid-template-columns: repeat(2, 270px);
     max-width: 555px;
     margin-top: 10px;
     padding-right: 0;
@@ -62,7 +66,7 @@
     display: flex;
     flex-direction: column;
 
-    max-width: 390px;
+    max-width: 270px;
 
     row-gap: 30px;
   }
